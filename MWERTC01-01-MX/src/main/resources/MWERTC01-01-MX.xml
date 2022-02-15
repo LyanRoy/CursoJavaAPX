@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="MWERTC01" application="MWER" version="01" country="MX" language="ES">
+	<paramsIn>
+		<parameter order="1" name="id" mandatory="1" type="Long" size="5"/>
+	</paramsIn>
+	<paramsOut>
+		<parameter order="1" name="outputId" mandatory="0" type="String" size="100"/>
+		<dto order="2" name="Costumer" mandatory="0" package="com.bbva.mwer.dto.test.Costumer" artifactId="MWERC001">
+			<parameter order="1" name="idPerson" mandatory="0" type="Long" size="5"/>
+			<parameter order="2" name="name" mandatory="0" type="String" size="50"/>
+			<parameter order="3" name="surname" mandatory="0" type="String" size="50"/>
+			<parameter order="4" name="lastname" mandatory="0" type="String" size="50"/>
+			<parameter order="5" name="rfc" mandatory="0" type="String" size="50"/>
+			<parameter order="6" name="contractnumer" mandatory="0" type="Long" size="8"/>
+			<parameter order="7" name="email" mandatory="0" type="String" size="50"/>
+		</dto>
+	</paramsOut>
+	<description>Transaccion para la obtencion de datos de un cliente con base a su ID</description>
+</transaction>

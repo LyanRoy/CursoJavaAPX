@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\w10\eclipse-workspace\curso_apx\MWER\.metadata\.plugins\org.eclipse.jdt.core
+2287514699.index
+1865797976.index
+1949110305.index
