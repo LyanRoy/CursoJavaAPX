@@ -18,4 +18,6 @@ public interface MWERRC01 {
 	
 	int executeInsertCostumer(Costumer costumer);
 
+	void execute();
+
 }

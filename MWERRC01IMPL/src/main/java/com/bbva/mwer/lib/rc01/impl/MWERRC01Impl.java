@@ -67,11 +67,17 @@ public class MWERRC01Impl extends MWERRC01Abstract {
 		
 		Costumer costumerDto = new Costumer();
 		
-		//jdbcUtils.
+		jdbcUtils.queryForMap("insertCostumer", costumer);
 		
 
 		
 		return 0;
+	}
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 
