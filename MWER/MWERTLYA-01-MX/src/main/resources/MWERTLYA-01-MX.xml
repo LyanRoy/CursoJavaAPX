@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transaction xmlns="http://www.w3schools.com" transactionName="MWERTLYA" application="MWER" version="01" country="MX" language="ES">
-	<paramsIn/>
-	<paramsOut/>
-	<description>Pruebas</description>
-</transaction>

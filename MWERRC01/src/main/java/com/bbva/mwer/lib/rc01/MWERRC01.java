@@ -14,6 +14,8 @@ public interface MWERRC01 {
 	
 	Costumer executeObtainCostumerData(Long id);
 	
-	Costumer generateDataDummy(Long id, Costumer dto);
+	Costumer generateData(Long id, Costumer dto);
+	
+	int executeInsertCostumer(Costumer costumer);
 
 }

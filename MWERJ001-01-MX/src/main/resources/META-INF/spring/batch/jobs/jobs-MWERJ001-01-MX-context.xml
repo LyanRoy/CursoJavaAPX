@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans" xmlns="http://www.springframework.org/schema/batch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+  <job id="MWERJ001-01-MX" incrementer="defaultIncrementer" job-repository="jobRepository">
+  	<description>Job de prueba para aprovisionamiento de base de datos</description>
+    <listeners>
+      <listener ref="interceptorJobExecutionListener"/>
+    </listeners>
+
+	<step id="ref_uploadCostumer" parent="uploadCostumer"></step>
+
+	<!--<step id="ref_uploadCostumer" parent="uploadCostumer">
+	  <next on="COMPLETED" to="ref_step2"/>
+	  <next on="*" to="stepFailed" />
+	</step>
+
+	<step id ="ref_step2" parent="step2">
+	  <next on="*" to="ref_stepFailed" />
+	</step>
+
+	<step id ="ref_stepFailed" parent="stepFailed"></step>-->
+
+  </job>
+
+  <step id="uploadCostumer">
+	<tasklet>
+	  <chunk reader="readFile" writer="writeDB" commit-interval="2"></chunk>
+	</tasklet>
+  </step>
+
+  <!--<step id="stepFailed">
+	<tasklet ref="beanFailed"></tasklet>
+  </step>-->
+
+</beans:beans>
